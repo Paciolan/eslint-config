@@ -1,0 +1,42 @@
+image: paciolanhub/alpine-node-dev:10.15.3c
+
+variables:
+  REPO_URL: gitlabdev.paciolan.info
+
+stages:
+  - build
+  - deploy
+
+Build & Test:
+  stage: build
+  tags:
+    - gitlabdev
+  except:
+    - tags
+  before_script:
+    - npm ci
+  script:
+    - npm run lint
+
+Deploy:
+  stage: deploy
+  environment: NPM
+  tags:
+    - gitlabdev
+  only:
+    - master
+  except:
+    - tags
+  before_script:
+    # add git ssh key
+    - ssh-keyscan $SSH_KNOWN_HOSTS >> ~/.ssh/known_hosts
+    - eval $(ssh-agent -s)
+    - echo "$GIT_SSH_PRIV_KEY" | ssh-add -
+  script:
+    # publish
+    - semantic-release-gitlab
+    - rm changelog.config.js # npm publish is dumb and will include this file
+    - npm-publish-git-tag --access public
+
+    # debug
+    - echo published to https://www.npmjs.com/package/$(node -p "require('./package.json').name")

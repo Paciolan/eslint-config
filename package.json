@@ -1,12 +1,13 @@
 {
   "name": "@paciolan/eslint-config",
-  "version": "1.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "",
   "author": "Paciolan",
   "license": "MIT",
   "keywords": [
     "eslint",
-    "eslint-config"
+    "eslint-config",
+    "prettier"
   ],
   "main": "index.js",
   "repository": {

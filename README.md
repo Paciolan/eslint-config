@@ -5,8 +5,11 @@ Paciolan ESLint default settings with Prettier.
 ## Install
 
 ```bash
-npm install --save-dev @paciolan/eslint-config \
-  eslint@ prettier eslint-plugin-prettier eslint-config-prettier
+# Install @paciolan/eslint-config
+npm install -D @paciolan/eslint-config
+
+# Install Peer Dependencies
+npm install -D eslint@ prettier eslint-plugin-prettier eslint-config-prettier
 ```
 
 Create an `.eslintrc.yml` file:

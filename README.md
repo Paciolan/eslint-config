@@ -9,7 +9,7 @@ Paciolan ESLint default settings with Prettier.
 npm install -D @paciolan/eslint-config
 
 # Install Peer Dependencies
-npm install -D eslint@ prettier eslint-plugin-prettier eslint-config-prettier
+npm install -D eslint@5 prettier eslint-plugin-prettier eslint-config-prettier
 ```
 
 Create an `.eslintrc.yml` file:

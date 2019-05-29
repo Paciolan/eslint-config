@@ -33,7 +33,7 @@ Add a `lint` script in `package.json`:
 - ["prettier/prettier": "error"](https://github.com/prettier/eslint-config-prettier)
 - ["no-unused-vars": "error"](https://eslint.org/docs/rules/no-unused-vars)
 - ["no-undef": "error"](https://eslint.org/docs/rules/no-undef)
-- ["max-lines-per-function": ["error", 20]](https://eslint.org/docs/rules/max-lines-per-function)
+- ["max-lines-per-function": ["warn", 20]](https://eslint.org/docs/rules/max-lines-per-function)
 
 ## Contributors
 

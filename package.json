@@ -18,21 +18,17 @@
     "cz": "git-cz",
     "lint": "eslint ."
   },
-  "devDependencies": {
-    "@commitlint/cli": "^7.6.1",
-    "@commitlint/config-conventional": "^7.6.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "git-cz": "^3.0.1",
-    "husky": "^2.3.0",
-    "prettier": "^1.17.1"
-  },
-  "peerDependencies": {
+  "dependencies": {
     "eslint": ">=5",
     "eslint-config-prettier": ">=4",
     "eslint-plugin-prettier": ">=3",
     "prettier": ">=1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "git-cz": "^3.0.1",
+    "husky": "^2.3.0"
   },
   "husky": {
     "hooks": {

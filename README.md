@@ -37,4 +37,4 @@ Add a `lint` script in `package.json`:
 
 ## Contributors
 
-Joel Thoms
+Joel Thoms ([@joelnet](https://twitter.com/joelnet))

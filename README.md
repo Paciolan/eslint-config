@@ -18,6 +18,16 @@ Create an `.eslintrc.yml` file:
 extends: ["@paciolan"]
 ```
 
+Add a `lint` script in `package.json`:
+
+```javascript
+  {
+    "scripts": {
+      "lint": "eslint ."
+    }
+  }
+```
+
 ## Rules
 
 - ["prettier/prettier": "error"](https://github.com/prettier/eslint-config-prettier)

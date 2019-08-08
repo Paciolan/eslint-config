@@ -17,6 +17,7 @@
   "release": {
     "branch": "master",
     "repositoryUrl": "git@gitlabdev.paciolan.info:development/library/javascript/paciolan-eslint-config.git",
+    "tagFormat": "${version}",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",

@@ -28,11 +28,6 @@ Deploy:
     - master
   except:
     - tags
-  before_script:
-    # add git ssh key
-    - ssh-keyscan $SSH_KNOWN_HOSTS >> ~/.ssh/known_hosts
-    - eval $(ssh-agent -s)
-    - echo "$GIT_SSH_PRIV_KEY" | ssh-add -
   script:
     # npm publish is dumb and will include this file
     - rm changelog.config.js

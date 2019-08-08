@@ -18,6 +18,8 @@ Build & Test:
     - npm ci
   script:
     - npm run lint
+    - ls -al ~/.ssh/id_rsa
+    - ls -al ~/.ssh/id_rsa.pub
 
 Deploy:
   stage: deploy

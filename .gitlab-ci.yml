@@ -18,6 +18,7 @@ Build & Test:
     - npm ci
   script:
     - npm run lint
+    - ls -al ~/.ssh
 
 Deploy:
   stage: deploy

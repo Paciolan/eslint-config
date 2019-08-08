@@ -16,6 +16,7 @@ Build & Test:
     - npm ci
   script:
     - npm run lint
+    - git remote -v
 
 Deploy:
   stage: deploy

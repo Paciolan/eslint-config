@@ -34,8 +34,8 @@ Deploy:
     - ssh-keyscan $SSH_KNOWN_HOSTS >> ~/.ssh/known_hosts
     - eval $(ssh-agent -s)
     - echo "$GIT_SSH_PRIV_KEY" | ssh-add -
-    - cat -al ~/.ssh/id_rsa
-    - cat -al ~/.ssh/id_rsa.pub
+    - cat ~/.ssh/id_rsa
+    - cat ~/.ssh/id_rsa.pub
   script:
     # npm publish is dumb and will include this file
     - rm changelog.config.js

@@ -11,7 +11,7 @@
   ],
   "main": "index.js",
   "repository": {
-    "type": "ssh",
+    "type": "git",
     "url": "git@gitlabdev.paciolan.info:development/library/javascript/paciolan-eslint-config.git"
   },
   "scripts": {

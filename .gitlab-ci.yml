@@ -31,6 +31,7 @@ Deploy:
   before_script:
     # add git ssh key
     - mkdir -p ~/.ssh
+    - rm -rf ~/.ssh/*
     - ssh-keyscan $SSH_KNOWN_HOSTS >> ~/.ssh/known_hosts
     - eval $(ssh-agent -s)
     - echo "$GIT_SSH_PRIV_KEY" | ssh-add -

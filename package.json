@@ -16,6 +16,8 @@
   },
   "release": {
     "branch": "master",
+    "repositoryUrl": "git@gitlabdev.paciolan.info:development/library/javascript/paciolan-eslint-config.git",
+    "tagFormat": "${version}",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -34,7 +36,8 @@
     "eslint-plugin-prettier": "^3.1.0",
     "git-cz": "^3.2.1",
     "husky": "^3.0.3",
-    "prettier": "^1.17.1"
+    "prettier": "^1.17.1",
+    "semantic-release": "^15.13.16"
   },
   "husky": {
     "hooks": {

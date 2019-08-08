@@ -10,8 +10,6 @@ stages:
 
 Build & Test:
   stage: build
-  tags:
-    - gitlabdev
   except:
     - tags
   before_script:
@@ -22,12 +20,16 @@ Build & Test:
 Deploy:
   stage: deploy
   environment: NPM
-  tags:
-    - gitlabdev
   only:
     - master
   except:
     - tags
+  before_script:
+    # add git ssh key
+    - mkdir -p ~/.ssh
+    - ssh-keyscan $SSH_KNOWN_HOSTS >> ~/.ssh/known_hosts
+    - eval $(ssh-agent -s)
+    - echo "$GIT_SSH_PRIV_KEY" | ssh-add -
   script:
     # npm publish is dumb and will include this file
     - rm changelog.config.js
@@ -36,7 +38,7 @@ Deploy:
     - node -e "require('fs').writeFileSync('./package.json', JSON.stringify(Object.assign(require('./package.json'), {repository:{type:'git',url:'$GITHUB_URL'}}), null, 2), 'utf8')"
 
     # publish
-    - npx semantic-release
+    - npx semantic-release --debug
 
     # debug
     - echo published to https://www.npmjs.com/package/$(node -p "require('./package.json').name")

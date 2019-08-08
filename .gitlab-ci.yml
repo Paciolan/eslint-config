@@ -39,7 +39,7 @@ Deploy:
     - node -e "require('fs').writeFileSync('./package.json', JSON.stringify(Object.assign(require('./package.json'), {repository:{type:'git',url:'$GITHUB_URL'}}), null, 2), 'utf8')"
 
     # publish
-    - npx semantic-release --debug
+    - npx semantic-release
 
     # debug
     - echo published to https://www.npmjs.com/package/$(node -p "require('./package.json').name")

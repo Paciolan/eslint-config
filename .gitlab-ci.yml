@@ -34,16 +34,14 @@ Deploy:
     - eval $(ssh-agent -s)
     - echo "$GIT_SSH_PRIV_KEY" | ssh-add -
   script:
-    # publish
-    - semantic-release-gitlab
-
     # npm publish is dumb and will include this file
     - rm changelog.config.js
 
     # set repository to github for npm link
     - node -e "require('fs').writeFileSync('./package.json', JSON.stringify(Object.assign(require('./package.json'), {repository:{type:'git',url:'$GITHUB_URL'}}), null, 2), 'utf8')"
 
-    - npm-publish-git-tag --access public
+    # publish
+    - npx semantic-release
 
     # debug
     - echo published to https://www.npmjs.com/package/$(node -p "require('./package.json').name")

@@ -13,8 +13,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "no-unused-vars": "error",
-    "no-undef": "error",
-    "max-lines-per-function": ["warn", 20]
+    "no-undef": "error"
   },
   extends: ["plugin:prettier/recommended"]
 };

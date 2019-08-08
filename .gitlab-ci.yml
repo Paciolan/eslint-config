@@ -18,8 +18,6 @@ Build & Test:
     - npm ci
   script:
     - npm run lint
-    - ls -al ~/.ssh/id_rsa
-    - ls -al ~/.ssh/id_rsa.pub
 
 Deploy:
   stage: deploy
@@ -32,9 +30,12 @@ Deploy:
     - tags
   before_script:
     # add git ssh key
+    - mkdir -p ~/.ssh
     - ssh-keyscan $SSH_KNOWN_HOSTS >> ~/.ssh/known_hosts
     - eval $(ssh-agent -s)
     - echo "$GIT_SSH_PRIV_KEY" | ssh-add -
+    - ls -al ~/.ssh/id_rsa
+    - ls -al ~/.ssh/id_rsa.pub
   script:
     # npm publish is dumb and will include this file
     - rm changelog.config.js

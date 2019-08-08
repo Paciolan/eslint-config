@@ -28,12 +28,6 @@
     "husky": "^3.0.3",
     "prettier": "^1.17.1"
   },
-  "peerDependencies": {
-    "eslint": ">=6",
-    "eslint-config-prettier": ">=6",
-    "eslint-plugin-prettier": ">=3",
-    "prettier": ">=1"
-  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",

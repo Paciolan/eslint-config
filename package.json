@@ -16,7 +16,6 @@
   },
   "release": {
     "branch": "master",
-    "repositoryUrl": "git@gitlabdev.paciolan.info:development/library/javascript/paciolan-eslint-config.git",
     "tagFormat": "${version}",
     "plugins": [
       "@semantic-release/commit-analyzer",
@@ -26,7 +25,8 @@
   },
   "scripts": {
     "cz": "git-cz",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "echo nothing to build"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",

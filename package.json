@@ -10,12 +10,9 @@
     "prettier"
   ],
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@gitlabdev.paciolan.info:development/library/javascript/paciolan-eslint-config.git"
-  },
   "release": {
     "branch": "master",
+    "repositoryUrl": "git@gitlabdev.paciolan.info:development/library/javascript/paciolan-eslint-config.git",
     "tagFormat": "${version}",
     "plugins": [
       "@semantic-release/commit-analyzer",

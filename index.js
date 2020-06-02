@@ -15,5 +15,5 @@ module.exports = {
     "no-unused-vars": "error",
     "no-undef": "error"
   },
-  extends: ["plugin:prettier/recommended"]
+  extends: ["eslint:recommended", "plugin:prettier/recommended"]
 };
